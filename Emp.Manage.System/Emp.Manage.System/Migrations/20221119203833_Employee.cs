@@ -17,6 +17,7 @@ namespace Emp.Manage.System.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     EmployeeCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FatherName = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -27,6 +28,7 @@ namespace Emp.Manage.System.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Employees", x => x.Id);
+                    
                 });
         }
 
